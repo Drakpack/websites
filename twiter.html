@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>twiter</title>
+	
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		#navbar {
+			background-color: pink;
+		}
+
+		#left-sidebar {
+			background-color: lightgreen;
+		}
+
+		#center {
+			background-color: lightyellow;
+		}
+
+		#right-sidebar {
+			background-color: lightgreen;
+		}
+
+		#footer {
+			background-color: lightblue;
+		}
+
+		.post-image {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+		}
+
+		.post {
+			border-bottom: 3px solid cyan;
+		}
+
+		#navbar-ul {
+			list-style: none;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.navbar-li {
+			display: inline-block;
+			padding-right: 40px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			line-height: 30px;
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div id="navbar" class="col-12">
+				<ul id="navbar-ul">
+					<li class="navbar-li"><i class="fab fa-earlybirds"></i></li>
+					<li class="navbar-li"><a href="https://google.com">Home</a></li>
+					<li class="navbar-li"><a href="https://google.com">Posts</a></li>
+					<li class="navbar-li"><a href="https://google.com">Profile</a></li>
+					<li class="navbar-li"><a href="https://google.com">Notifications</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="main-content" class="row">
+			<div id="left-sidebar" class="col-3">
+				<p>This is my left</p>
+			</div>
+			<div id="center" class="col-6">
+				<div class="post row">
+					<div class="col-3 img-side">
+						<div class="profile-container">
+							<img class="post-image" src="https://www.afjv.com/2017/04/170414-ea.png">
+						</div>
+					</div>
+					<div class="col-7 text-side">
+						<p>EA @EA - 3/13/18</p>
+						<p>we at EA still think that lootboxes are not gambiling
+						#not illegal</p> 
+					</div>
+				</div>
+				<div class="post row">
+					<div class="col-3 img-side">
+						<div class="profile-container">
+							<img class="post-image" src="data:image/png;base64,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">
+						</div>
+					</div>
+					<div class="col-7 text-side">
+						<p>gamer everywhere @gamer everywhere - 3/13/18</p>
+						<p>what about your fans who love the games you publish </p> 
+					</div>
+				</div>
+				<div class="post row">
+					<div class="col-3 img-side">
+						<div class="profile-container">
+							<img class="post-image" src="https://www.afjv.com/2017/04/170414-ea.png">
+						</div>
+					</div>
+					<div class="col-7 text-side">
+						<p>EA @EA - 3/13/18</p>
+						<p>we only care for them if they buy our games and buy everything in it $_$ </p> 
+					</div>
+				</div>
+			</div>
+			<div id="right-sidebar" class="col-3">
+				<p>This is my right</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div id="footer" class="col-12">
+				<i class=></i> This are the footer.
+			</div>
+		</div>
+	</div>
+</body>
+</html>
